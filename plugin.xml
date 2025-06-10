@@ -1,0 +1,12 @@
+<plugin id="zebra-datawedge-integration" name="zebra-datawedge-integration" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+  <platform name="android">
+    <source-file src="src/android/ZebraReceiver.java" target-dir="src/com/mycompany/zebra" />
+    <config-file target="AndroidManifest.xml" parent="/*">
+      <receiver android:exported="true" android:name="com.mycompany.zebra.ZebraReceiver">
+        <intent-filter>
+          <action android:name="com.mycompany.MY_SCAN" />
+        </intent-filter>
+      </receiver>
+    </config-file>
+  </platform>
+</plugin>
